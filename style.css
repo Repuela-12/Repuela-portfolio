@@ -1,0 +1,425 @@
+
+/* =========================
+   GENERAL STYLES
+========================= */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #0e0d0d;
+    color: white;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background-color: #080808;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+/* LOGO */
+
+.logo {
+    font-size: 3rem;
+    color: #f7f3f3;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+/* NAVIGATION */
+
+nav a {
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active {
+    color: #f3eded;
+    border-bottom: 3px solid #f7f2f2;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 995px) {
+    header {
+        padding: 2rem 4%;
+    }
+
+    nav a {
+        margin-left: 2rem;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    nav a {
+        margin-left: 0;
+        font-size: 1.4rem;
+    }
+}
+
+.home {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0 9%;
+}
+
+.home-img img {
+    width: 500px;
+    height: 500px;
+    border-radius: 80%;
+    object-fit: cover;
+    border: 3px solid #b74b4b;
+}
+
+.home-content h1 {
+    font-size: 5.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.home-content h1 span {
+    color: #b74b4b;
+}
+
+.home-content h2 {
+    font-size: 2.8rem;
+    color: #b74b4b;
+    margin-bottom: 1.5rem;
+}
+
+.home-content p {
+    font-size: 1.6rem;
+    line-height: 1.8;
+    color: #cccccc;
+    margin-bottom: 2rem;
+}
+
+/* About page positioning */
+.home {
+    align-items: flex-start;
+    padding-top: 14rem;
+}
+
+/* Center the About page content */
+.about-page {
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 14rem;
+}
+
+.about-page .home-content {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* EDUCATION SECTION */
+.education {
+    min-height: auto;
+    padding: 0 9% 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.education h2 {
+    font-size: 4rem;
+    color: white;
+    margin-bottom: 3rem;
+}
+
+.education h2 span {
+    color: #b74b4b;
+}
+
+.education-box {
+    width: 100%;
+    max-width: 750px;
+    padding: 3rem;
+    background: #111;
+    border: 2px solid #b74b4b;
+    border-radius: 2rem;
+    transition: 0.3s ease;
+}
+
+.education-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 20px #b74b4b;
+}
+
+.education-box h3 {
+    font-size: 2.5rem;
+    color: #b74b4b;
+    margin-bottom: 1.5rem;
+}
+
+.education-box h4 {
+    font-size: 1.8rem;
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+.education-box p {
+    font-size: 1.6rem;
+    color: #ccc;
+    line-height: 1.8;
+}
+
+/* Reduce space between About and Education */
+body .about-page {
+    min-height: auto !important;
+    padding-bottom: 3rem !important;
+    margin-bottom: 3rem !important;
+}
+
+body .education {
+    min-height: auto !important;
+    padding-top: 3rem !important;
+    margin-top: 3rem !important;
+}
+
+/* SKILLS SECTION */
+.skills {
+    padding: 5rem 9%;
+    text-align: center;
+}
+
+.skills h2 {
+    font-size: 4rem;
+    color: white;
+    margin-bottom: 3rem;
+}
+
+.skills h2 span {
+    color: #b74b4b;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.skills-box {
+    background: #111;
+    padding: 3rem;
+    border: 2px solid #b74b4b;
+    border-radius: 2rem;
+    transition: 0.3s ease;
+}
+
+.skills-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 20px #b74b4b;
+}
+
+.skills-box h3 {
+    font-size: 2.5rem;
+    color: #b74b4b;
+    margin-bottom: 1rem;
+}
+
+.skills-box p {
+    font-size: 1.6rem;
+    color: #ccc;
+}
+
+/* Mobile layout */
+@media (max-width: 600px) {
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* EXPERIENCE SECTION */
+.experience {
+    min-height: 100vh;
+    padding: 14rem 9% 5rem;
+    text-align: center;
+}
+
+.experience h1 {
+    font-size: 4rem;
+    margin-bottom: 4rem;
+    color: white;
+}
+
+.experience h1 span {
+    color: #b74b4b;
+}
+
+.experience-box {
+    max-width: 850px;
+    margin: 0 auto 3rem;
+    padding: 3rem;
+    background: #111;
+    border: 2px solid #b74b4b;
+    border-radius: 2rem;
+    transition: 0.3s ease;
+}
+
+.experience-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 20px #b74b4b;
+}
+
+.experience-box h2 {
+    font-size: 2.5rem;
+    color: #b74b4b;
+    margin-bottom: 1.5rem;
+}
+
+.experience-box p {
+    font-size: 1.6rem;
+    color: #ccc;
+    line-height: 1.8;
+}
+
+
+/* CONTACT SECTION */
+
+.contact {
+    min-height: 100vh;
+    padding: 15rem 9% 5rem;
+    background: #080808;
+    text-align: center;
+}
+
+.contact h1 {
+    font-size: 5rem;
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+.contact h1 span {
+    color: #b74b4b;
+}
+
+.contact-intro {
+    font-size: 1.7rem;
+    color: #ccc;
+    margin-bottom: 5rem;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.contact-box {
+    width: 280px;
+    padding: 4rem 2rem;
+    background: #151515;
+    border: 2px solid #b74b4b;
+    border-radius: 2rem;
+    transition: 0.3s ease;
+}
+
+.contact-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px #b74b4b;
+}
+
+.contact-box h2 {
+    font-size: 2.8rem;
+    color: #b74b4b;
+    margin-bottom: 2rem;
+}
+
+.contact-box p {
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.contact-box a {
+    display: inline-block;
+    font-size: 1.4rem;
+    color: white;
+    background: #b74b4b;
+    padding: 1rem 2rem;
+    border-radius: 3rem;
+    transition: 0.3s ease;
+}
+
+.contact-box a:hover {
+    background: white;
+    color: #b74b4b;
+}
+
+@media (max-width: 700px) {
+    .contact {
+        padding-top: 18rem;
+    }
+}
+
+/* FIX FACEBOOK TEXT OVERFLOW */
+.contact-box {
+    min-width: 0;
+    overflow: hidden;
+}
+
+.contact-box p {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+
+
